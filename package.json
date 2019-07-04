@@ -9,7 +9,9 @@
     "pretest": "node test/helpers/setup-mysql.js --ci-only",
     "lint": "eslint .",
     "test": "mocha",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,8 @@
     "stable": "^0.1.5",
     "strong-error-handler": "^1.0.1",
     "strong-globalize": "^2.6.6",
-    "strong-wait-till-listening": "^1.0.0"
+    "strong-wait-till-listening": "^1.0.0",
+    "snyk": "^1.190.0"
   },
   "devDependencies": {
     "better-stack-traces": "^1.0.1",
@@ -51,5 +54,6 @@
     "mysql": "^2.4.2",
     "read": "^1.0.5",
     "supertest": "^1.2.0"
-  }
+  },
+  "snyk": true
 }
